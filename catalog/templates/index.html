@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Главная страница библиотеки</h1>
+
+  <p>Добро пожаловать в <em>Библиотеку</em>, лучшую библиотеку, сайт которой сделан на Django для обучения Владимиром</p>
+
+<h2>Контент</h2>
+
+  <p>У нас есть следующие данные:</p>
+  <ul>
+    <li><strong>Книги:</strong> {{ num_books }}</li>
+    <li><strong>Копии:</strong> {{ num_instances }}</li>
+    <li><strong>Доступных копий:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторов:</strong> {{ num_authors }}</li>
+  </ul>
+<p>Вы посетили эту страницу {{ num_visits }}{% if num_visits == 1 %} раз {% else %} раз{% endif %}.</p>
+{% endblock %}
